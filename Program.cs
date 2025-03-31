@@ -38,5 +38,5 @@ decimal m = 246.80m;
 Console.WriteLine("Type: " + typeof(decimal) + ", Example: " + m + ", Size: " + sizeof(decimal));
 
 string n = "Belhard";
-Console.WriteLine("Type: " + typeof(string) + ", Example: " + n + ", Size: " + "limited by computer resourses");
+Console.WriteLine("Type: " + typeof(string) + ", Example: " + n + ", Size: " + "limited by computer resources");
 

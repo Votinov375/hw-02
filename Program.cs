@@ -44,7 +44,7 @@
 Console.Write("Enter the Number: ");
 string input = "";
 input = Console.ReadLine();
-long result = long.Parse(input);
+double result = double.Parse(input);
 
 if (result >= sbyte.MinValue && result <= sbyte.MaxValue) { 
     sbyte res = (sbyte)result;
@@ -102,11 +102,12 @@ if (result >= uint.MinValue && result <= uint.MaxValue) {
     Console.WriteLine(message);
 }
 
-// if (result >= ulong.MinValue && result <= ulong.MaxValue) {
-//     ulong res = (ulong)result;
-//     Console.WriteLine($"ulong {res}");
-// } else {
-//     string message = $"Для приведения числа {result} к типу ulong число не может быть больше {ulong.MaxValue} и меньше {ulong.MinValue}";
-//     Console.WriteLine(message);
-// }
+if (result >= ulong.MinValue && result <= ulong.MaxValue) {
+    ulong res = (ulong)result;
+    Console.WriteLine($"ulong {res}");
+} else {
+    string message = $"Для приведения числа {result} к типу ulong число не может быть больше {ulong.MaxValue} и меньше {ulong.MinValue}";
+    Console.WriteLine(message);
+}
+//Console.WriteLine(ulong.MaxValue); //18446744073709551615
 

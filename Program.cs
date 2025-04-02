@@ -41,60 +41,72 @@
 //Console.WriteLine("Type: " + typeof(string) + ", Example: " + n + ", Size: " + "limited by computer resources");
 
 
-Console.Write("Enter the Number:");
-string? input = "";
+Console.Write("Enter the Number: ");
+string input = "";
 input = Console.ReadLine();
 long result = long.Parse(input);
 
-if (result >= -128 && result <= 127 ) {
-    Console.WriteLine("sbyte ok");
-    }
-else {Console.WriteLine("sbyte not ok");}
+if (result >= sbyte.MinValue && result <= sbyte.MaxValue) { 
+    sbyte res = (sbyte)result;
+    Console.WriteLine($"sbyte {res}");
+} else {
+    string message = $"Для приведения числа {result} к типу sbyte число не может быть больше {sbyte.MaxValue} и меньше {sbyte.MinValue}";
+    Console.WriteLine(message);
+}
 
-if (result >= -32768 && result <= 32767 ) {
-    Console.WriteLine("short ok");
-    }
-else {Console.WriteLine("short not ok");}
+if (result >= short.MinValue && result <= short.MaxValue) {
+    short res = (short)result;
+    Console.WriteLine($"short {res}");
+} else {
+    string message = $"Для приведения числа {result} к типу short число не может быть больше {short.MaxValue} и меньше {short.MinValue}";
+    Console.WriteLine(message);
+}
 
-if (result >= -2147483648 && result <= 2147483647 ) {
-    Console.WriteLine("int ok");
-    }
-else {Console.WriteLine("int not ok");}
+if (result >= int.MinValue && result <= int.MaxValue) {
+    int res = (int)result;
+    Console.WriteLine($"int {res}");
+} else {
+    string message = $"Для приведения числа {result} к типу int число не может быть больше {int.MaxValue} и меньше {int.MinValue}";
+    Console.WriteLine(message);
+}
 
-if (result >= -9223372036854775808 && result <= 9223372036854775807 ) {
-    Console.WriteLine("long ok");
-    }
-else {Console.WriteLine("long not ok");}
+if (result >= long.MinValue && result <= long.MaxValue) {
+    long res = (long)result;
+    Console.WriteLine($"long {res}");
+} else {
+    string message = $"Для приведения числа {result} к типу long число не может быть больше {long.MaxValue} и меньше {long.MinValue}";
+    Console.WriteLine(message);
+}
 
-if (result >= 0 && result <= 255 ) {
-    Console.WriteLine("byte ok");
-    }
-else {Console.WriteLine("byte not ok");}
+if (result >= byte.MinValue && result <= byte.MaxValue) {
+    byte res = (byte)result;
+    Console.WriteLine($"byte {res}");
+} else {
+    string message = $"Для приведения числа {result} к типу byte число не может быть больше {byte.MaxValue} и меньше {byte.MinValue}";
+    Console.WriteLine(message);
+}
 
-if (result >= 0 && result <= 65535 ) {
-    Console.WriteLine("ushort ok");
-    }
-else {Console.WriteLine("ushort not ok");}
+if (result >= ushort.MinValue && result <= ushort.MaxValue) {
+    ushort res = (ushort)result;
+    Console.WriteLine($"ushort {res}");
+} else {
+    string message = $"Для приведения числа {result} к типу ushort число не может быть больше {ushort.MaxValue} и меньше {ushort.MinValue}";
+    Console.WriteLine(message);
+}
 
-if (result >= 0 && result <= 4294967295 ) {
-    Console.WriteLine("uint ok");
-    }
-else {Console.WriteLine("uint not ok");}
+if (result >= uint.MinValue && result <= uint.MaxValue) {
+    uint res = (uint)result;
+    Console.WriteLine($"uint {res}");
+} else {
+    string message = $"Для приведения числа {result} к типу uint число не может быть больше {uint.MaxValue} и меньше {uint.MinValue}";
+    Console.WriteLine(message);
+}
 
-if (result >= 0 && result <= 18446744073709551615 ) {
-    Console.WriteLine("ulong ok");
-    }
-else {Console.WriteLine("ulong not ok");}
+// if (result >= ulong.MinValue && result <= ulong.MaxValue) {
+//     ulong res = (ulong)result;
+//     Console.WriteLine($"ulong {res}");
+// } else {
+//     string message = $"Для приведения числа {result} к типу ulong число не может быть больше {ulong.MaxValue} и меньше {ulong.MinValue}";
+//     Console.WriteLine(message);
+// }
 
-
-
-/*
-int a = 3;
-int b = 2;
-if (a > b) Console.WriteLine("a > b");
-if (a < b) Console.WriteLine("a < b");
-byte a = 254;
-byte b = 0;
-if (a == 255) Console.WriteLine("Max");
-if (a < 255) Console.WriteLine("Not Max");
-*/
